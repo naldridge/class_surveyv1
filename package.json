@@ -1,0 +1,17 @@
+{
+  "name": "class_surveyv1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "db:connect": "psql postgres://lwbnisji:TTy-kD28UM3Qjvf-qmvq0QiLvEJRd5w7@batyr.db.elephantsql.com/lwbnisji",
+    "db:init": "psql -f ./sql/schema.sql postgres://lwbnisji:TTy-kD28UM3Qjvf-qmvq0QiLvEJRd5w7@batyr.db.elephantsql.com/lwbnisji",
+    "db:seed": "psql -f ./sql/seed.sql postgres://lwbnisji:TTy-kD28UM3Qjvf-qmvq0QiLvEJRd5w7@batyr.db.elephantsql.com/lwbnisji",
+    "db:drop": "psql -f ./sql/reset.sql postgres://lwbnisji:TTy-kD28UM3Qjvf-qmvq0QiLvEJRd5w7@batyr.db.elephantsql.com/lwbnisji",
+    "db:reset": "npm run db:drop; npm run db:init;",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
