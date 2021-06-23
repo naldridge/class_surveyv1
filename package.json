@@ -2,16 +2,23 @@
   "name": "class_surveyv1",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "db:connect": "psql postgres://lwbnisji:TTy-kD28UM3Qjvf-qmvq0QiLvEJRd5w7@batyr.db.elephantsql.com/lwbnisji",
-    "db:init": "psql -f ./sql/schema.sql postgres://lwbnisji:TTy-kD28UM3Qjvf-qmvq0QiLvEJRd5w7@batyr.db.elephantsql.com/lwbnisji",
-    "db:seed": "psql -f ./sql/seed.sql postgres://lwbnisji:TTy-kD28UM3Qjvf-qmvq0QiLvEJRd5w7@batyr.db.elephantsql.com/lwbnisji",
-    "db:drop": "psql -f ./sql/reset.sql postgres://lwbnisji:TTy-kD28UM3Qjvf-qmvq0QiLvEJRd5w7@batyr.db.elephantsql.com/lwbnisji",
+    "db:connect": "psql ",
+    "db:init": "psql -f ./sql/schema.sql ",
+    "db:seed": "psql -f ./sql/seed.sql ",
+    "db:drop": "psql -f ./sql/reset.sql ",
     "db:reset": "npm run db:drop; npm run db:init;",
+    "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-es6-template-engine": "^2.2.3",
+    "pg-promise": "^10.10.2"
+  }
 }
