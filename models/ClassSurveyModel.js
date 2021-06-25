@@ -13,8 +13,7 @@ class ClassSurveyModel {
                 `SELECT topic_name, ranking_title FROM topics
                     INNER JOIN rankings
                     ON topics.topic_score = rankings.id
-                ORDER BY topics.topic_name;
-                `
+                ORDER BY topics.topic_name;`
             )
             return response;
         } catch(error){
